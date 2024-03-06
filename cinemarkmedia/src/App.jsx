@@ -5,7 +5,14 @@ import './index.css'
 function App() {
   const [showCount, setShowCount] = useState(8);
   const [isActive, setIsActive] = useState(false);
-  const [menubar,setMenubar]=useState(true)
+  const [menubar,setMenubar]=useState(true);
+  const [sidebar,setSidebarh]=useState(true)
+
+
+  const handleClickside= () => {
+    // Toggle the state between true and false
+   
+  };
   const handleClick = () => {
     console.log("data")
     setIsActive(true);
@@ -135,25 +142,27 @@ const validateEmail = (email) => {
   ]
   return (
     <>
-      <div className={ `flex px-8 py-6 transition-all duration-500	transition-all duration-500 bg-black  justify-between  w-[100%] position: sticky top-0 z-10`} id='home'>
+   
+      <div className={ `flex px-2 py-4 md:px-5 md:py-4 lg:px-5 lg:py-4 transition-all duration-500	transition-all duration-500 bg-black  justify-between  w-[100%] position: sticky top-0 z-10`} id='home'>
        
-        <ul className={`${isActive?"transition-all duration-500 flex-col md:flex-col lg:flex  h-screen md:screen ":"hidden md:hidden lg:flex"}  w-[100%] justify-between`}>
-      <a href="" className='text-white-600 text-white'><img src="/img/Mobile wab logo.png" alt="logo" height={100} width={100}></img></a>
-      <div className={`${isActive?"transition-all duration-500 flex-col md:flex-col lg:flex  items-center mt-[50px]":""} flex gap-x-[50px]`}>
-          <li className='mx-2 text-white hover:font-medium animate-pulse hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="/">Home</a></li>
-          <li className='mx-2 text-white  hover:font-medium animate-pulse hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="#about">About Us</a></li>
-          <li className='mx-2 text-white  hover:font-medium  animate-pulse hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="#services">Services</a></li>
-          <li className='mx-2 text-white  hover:font-medium animate-pulse  hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="#work">Our Work</a></li>
-          <li className='mx-2 text-white  hover:font-medium  animate-pulse hover:underline transition duration-300 ease-in-out font-nunito'><a href="#contact">Contact</a></li>
+        <ul className={`${isActive ?"transition-all duration-500 items-center flex-col md:flex-col lg:flex  h-screen md:screen ":"hidden md:hidden lg:flex"}  w-[100%] justify-between`}>
+      <a href="/" className='text-white-600   flex  items-center text-white justify-center'><img src="/img/Mobile logo.png" alt="logo" height={50} width={50}></img> <span className="text-[16px] font-sub-content  md:text-[20px] font-sans text-whit mx-2 ">CineMark Media</span></a>
+      <div className={`${isActive?"transition-all duration-500 flex-col md:flex-col lg:flexmt-[50px]":""} flex items-center gap-x-[50px] mt-5 md:mt-0 lg:mt-0`}>
+          <li  onClick={closesidebar} className='mx-2 text-white hover:font-medium animate-pulse hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="\">Home</a></li>
+          <li onClick={closesidebar} className='mx-2 text-white  hover:font-medium animate-pulse hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="#about">About Us</a></li>
+          <li onClick={closesidebar} className='mx-2 text-white  hover:font-medium  animate-pulse hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="#services">Services</a></li>
+          <li onClick={closesidebar} className='mx-2 text-white  hover:font-medium animate-pulse  hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="#work">Our Work</a></li>
+          <li onClick={closesidebar} className='mx-2 text-white  hover:font-medium  animate-pulse hover:underline transition duration-300 ease-in-out font-nunito'><a href="#contact">Contact</a></li>
           </div>
        
         </ul>
-        { isActive && <img  className={`block md:block lg:hidden 'bg-gray-300 text-black'} h-10 w-10`} onClick={closesidebar} src='/img/cross.png'></img>}
-       {menubar && <img  className={"block md:block lg:hidden absolute top-3 right-5"}  onClick={handleClick} src='/img/hamburger.svg' height={30} width={30}></img>}
+        { isActive && <img  className={`block md:block lg:hidden 'bg-gray-300 text-black'} h-10 w-10 absolute right-[10px]`} onClick={closesidebar} src='/img/cross.png'></img>}
+        {menubar && <a href="" className='text-white-600   block md:block lg:hidden flex  items-center text-white justify-center'><img src="/img/Mobile logo.png" alt="logo" height={50} width={50}></img> <span className="text-[16px] font-sub-content  md:text-[20px] font-sans text-whit mx-2 ">CineMark Media</span></a>}
+       {menubar && <img  className={"block md:block lg:hidden absolute top-6 right-4"}  onClick={handleClick} src='/img/hamburger.svg' height={30} width={30}></img>}
       </div>
-      <div className='bg-hero-pattern   bg-cover h-screen bg-no-repeat bg-center  opacity-90 flex  justify-center items-center  top-0 left-0 '>
+      <div  id="d" className='bg-hero-pattern   bg-cover h-screen bg-no-repeat bg-center  opacity-90 flex  justify-center items-center  top-0 left-0 '>
         <div className='text-center'>
-          <h1 className='text-[150px]  text-white animate-bounce' >CineMark media</h1>
+          <h1 className='text-[80px] lg:text-[150px]  text-white animate-bounce' >CineMark media</h1>
           <h2 className='text-[75px] text-white' ></h2>
         </div>
       </div>
@@ -163,7 +172,7 @@ const validateEmail = (email) => {
           <div className='text-center'>
             <h2 className='text-[28px] leading-relaxed font-sans font-bold text-gray-600 text-white'>About Us</h2>
             <p className='max-w-[700px] text-[16px] font-sub-content  md:text-[20px] font-sans text-white mt-5 '>Cinemark Media is a dynamic digital marketing agency that combines
-              creativity and strategic thinking to deliver innovative and effective solutions
+              creativity and strategic thinking to deliver innovative and effective solutions 
               for your projects. With a focus on cutting-edge digital trends, Cinemark Media is dedicated
               to elevating your online presence and maximizing your impact in the digital landscape.</p>
           </div>
@@ -176,23 +185,23 @@ const validateEmail = (email) => {
           <h2 className='text-[32px] leading-relaxed font-sans font-bold font-sans  text-white' id='services'>Our Services</h2>
           <p className='font-sans text-white  text-[16px]  md:text-[20px] mt-5  font-sub-content'>DG Avatar specialises in all types of branding solutions and primarily serves the Film and Entertainment sector. We provide the following services:</p>
           <div className='flex flex-wrap gap-[32px] mt-[40px] justify-center'>
-            <div className='flex flex-col items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Digital_Marketing_2-removebg-preview (1).png" alt="logo" height={300} width={300}></img>
-              <p className='font-sans text-gray-700 font-nunito  '>Digital Marketing</p>
+            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Social_media_management-removebg-preview.png" alt="logo" height={300} width={300}></img>
+              <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white '>Digital Marketing</p>
             </div>
-            <div className='flex flex-col items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Digital_PR_2-removebg-preview.png" alt="logo" height={300} width={300}></img>
-              <p className='font-sans text-gray-700 font-nunito '>Digital PR</p>
+            <div className='flex flex-col justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Social_media_management-removebg-preview.png" alt="logo" height={300} width={300}></img>
+              <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>Digital PR</p>
             </div>
-            <div className='flex flex-col items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/youtube_marketing-removebg-preview.png" alt="logo" height={300} width={300}></img>
-              <p className='font-sans text-gray-700 font-nunito '>Youtube Marketing</p>
+            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Social_media_management-removebg-preview.png" alt="logo" height={300} width={300}></img>
+              <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>Youtube Marketing</p>
             </div>
-            <div className='flex flex-col items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/youtube_marketing-removebg-preview.png" alt="logo" height={300} width={300}></img>
-              <p className='font-sans text-gray-700 font-nunito '>Meme Marketing</p>
+            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Social_media_management-removebg-preview.png" alt="logo" height={300} width={300}></img>
+              <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>Meme Marketing</p>
             </div>
-            <div className='flex flex-col items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/youtube_marketing-removebg-preview.png" alt="logo" height={300} width={300}></img>
-              <p className='font-sans text-gray-700 font-nunito '>Twiter Marketing</p>
+            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Social_media_management-removebg-preview.png" alt="logo" height={300} width={300}></img>
+              <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>Twiter Marketing</p>
             </div>
-            <div className='flex flex-col items-center  rounded-[30px] p-[15px]shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/youtube_marketing-removebg-preview.png" alt="logo" height={300} width={300}></img>
-              <p className='font-sans text-gray-700 font-nunito '>Social Media Management</p>
+            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Social_media_management-removebg-preview.png" alt="logo" height={300} width={300}></img>
+              <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>social media management</p>
             </div>
           </div>
         </div>
@@ -226,7 +235,7 @@ const validateEmail = (email) => {
         <h3 className=' text-center mt-[100px] text-[32px] leading-relaxed font-sans font-bold text-white text-[18px]  md:text-[24px] font-sans'>Contact Us</h3>
         <div className="">
           <p className='font-sans text-white text-[32px] font-bold mb-[30px] text-[18px]  text-center md:text-start md:text-[24px] font-sans'>Start a project with us today!</p>
-          <form className="bg-black shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
+          <form className="bg-black shadow-md rounded lg:px-8 lg:pt-6 pb-8 lg:mb-4" onSubmit={handleSubmit}>
       <div className="mb-10">
         <input
           className="shadow appearance-none text-white w-full font-nunito py-2 text-gray-700 leading-tight focus:outline-none focus:shadow-outline bg-black border-b-[1px]"
@@ -290,11 +299,16 @@ const validateEmail = (email) => {
     </form>
         </div>
         {/* Footer */}
-        <div className='bg-white h-1'></div>
-        <div className="">
-          <h3>Mukesh881yadav@gmail.com</h3>
-          <h3>mukesh.yadav1fiance.co.in</h3>
-          <p>©2023 by Communiqué. Powered and secured by FullStop Media & Entertainment</p>
+        <div className='bg-white h-1 '></div>
+        <div className="flex-col justify-center items-center text-center mt-10">
+          <h3 className='font-sub-content text-white cursor-pointer '>mukesh881yadav@gmail.com</h3>
+          <h3 className='font-sub-content text-white  mt-3'>mukesh.yadav1fiance.co.in</h3>
+          <div className='flex justify-center items-center'>
+           <a> <img    className='h-20 w-20 cursor-pointer' src='/img/insta.png'></img></a>
+           <a> <img    className='h-20 w-20 cursor-pointer' src='/img/insta.png'></img></a>
+           <a> <img    className='h-20 w-20 cursor-pointer' src='/img/insta.png'></img></a>
+           <a> <img    className='h-20 w-20 cursor-pointer' src='/img/insta.png'></img></a>
+          </div>
         </div>
       </div>
     </>
