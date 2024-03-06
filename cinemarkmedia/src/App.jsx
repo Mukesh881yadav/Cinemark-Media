@@ -138,7 +138,7 @@ const validateEmail = (email) => {
       <div className={ `flex px-8 py-6 transition-all duration-500	transition-all duration-500 bg-black  justify-between  w-[100%] position: sticky top-0 z-10`} id='home'>
        
         <ul className={`${isActive?"transition-all duration-500 flex-col md:flex-col lg:flex  h-screen md:screen ":"hidden md:hidden lg:flex"}  w-[100%] justify-between`}>
-      <a href="" className='text-white-600 text-white'><img src="/img/newLogo.png" alt="logo" height={100} width={100}></img></a>
+      <a href="" className='text-white-600 text-white'><img src="/img/Mobile wab logo.png" alt="logo" height={100} width={100}></img></a>
       <div className={`${isActive?"transition-all duration-500 flex-col md:flex-col lg:flex  items-center mt-[50px]":""} flex gap-x-[50px]`}>
           <li className='mx-2 text-white hover:font-medium animate-pulse hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="/">Home</a></li>
           <li className='mx-2 text-white  hover:font-medium animate-pulse hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="#about">About Us</a></li>
