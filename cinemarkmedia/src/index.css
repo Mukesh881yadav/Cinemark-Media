@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* CSS (tailwind.css or your custom CSS file) */
+
+/* Define custom keyframes */
+
+
+
+@layer components {
+    .my-custom-style {
+        @keyframes ping-custom {
+            0% {
+              transform: scale(0);
+              opacity: 0;
+            }
+            100% {
+              transform: scale(2);
+              opacity: 0;
+            }
+          }
+          
+          /* Apply the animation to the element */
+          .animate-ping-custom {
+            animation: ping-custom 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+          }
+    }
+  }
+  

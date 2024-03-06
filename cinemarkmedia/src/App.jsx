@@ -23,13 +23,20 @@ function App() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
+  
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            // inline: 'nearest', 
+            offsetTop: 100
+          });
+        }
       });
     });
   }, []);
+  
 
 //  Form Validation
 
@@ -128,26 +135,26 @@ const validateEmail = (email) => {
   ]
   return (
     <>
-      <div className={ `flex px-8 py-6 transition-all duration-500	transition-all duration-500 bg-gray-600  justify-between  w-[100%] position: sticky top-0 z-10`} id='home'>
+      <div className={ `flex px-8 py-6 transition-all duration-500	transition-all duration-500 bg-black  justify-between  w-[100%] position: sticky top-0 z-10`} id='home'>
        
         <ul className={`${isActive?"transition-all duration-500 flex-col md:flex-col lg:flex  h-screen md:screen ":"hidden md:hidden lg:flex"}  w-[100%] justify-between`}>
-      <a href="" className='text-white-600 text-white'>CINE MARK MEDIA</a>
+      <a href="" className='text-white-600 text-white'><img src="/img/newLogo.png" alt="logo" height={100} width={100}></img></a>
       <div className={`${isActive?"transition-all duration-500 flex-col md:flex-col lg:flex  items-center mt-[50px]":""} flex gap-x-[50px]`}>
-          <li className='mx-2 text-white hover:text-blue-500  hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="/">Home</a></li>
-          <li className='mx-2 text-white  hover:text-blue-500  hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="#about">About Us</a></li>
-          <li className='mx-2 text-white  hover:text-blue-500  hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="#services">Services</a></li>
-          <li className='mx-2 text-white  hover:text-blue-500  hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="#work">Our Work</a></li>
-          <li className='mx-2 text-white  hover:text-blue-500  hover:underline transition duration-300 ease-in-out font-nunito'><a href="#contact">Contact</a></li>
+          <li className='mx-2 text-white hover:font-medium animate-pulse hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="/">Home</a></li>
+          <li className='mx-2 text-white  hover:font-medium animate-pulse hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="#about">About Us</a></li>
+          <li className='mx-2 text-white  hover:font-medium  animate-pulse hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="#services">Services</a></li>
+          <li className='mx-2 text-white  hover:font-medium animate-pulse  hover:underline transition duration-300 ease-in-out mb-5 lg:mb-0 font-nunito'><a href="#work">Our Work</a></li>
+          <li className='mx-2 text-white  hover:font-medium  animate-pulse hover:underline transition duration-300 ease-in-out font-nunito'><a href="#contact">Contact</a></li>
           </div>
        
         </ul>
         { isActive && <img  className={`block md:block lg:hidden 'bg-gray-300 text-black'} h-10 w-10`} onClick={closesidebar} src='/img/cross.png'></img>}
        {menubar && <img  className={"block md:block lg:hidden absolute top-3 right-5"}  onClick={handleClick} src='/img/hamburger.svg' height={30} width={30}></img>}
       </div>
-      <div className='bg-hero-pattern h-screen bg-no-repeat bg-center object-cover  flex  justify-center items-center opacity-70 top-0 left-0 '>
+      <div className='bg-hero-pattern   bg-cover h-screen bg-no-repeat bg-center  opacity-90 flex  justify-center items-center  top-0 left-0 '>
         <div className='text-center'>
-          <h1 className='text-[100px]  text-white'>suraj padwa sala</h1>
-          <h2 className='text-[75px] text-white' > Hardik mota bhosdi ka</h2>
+          <h1 className='text-[150px]  text-white animate-bounce' >CineMark media</h1>
+          <h2 className='text-[75px] text-white' ></h2>
         </div>
       </div>
       {/* About us */}
@@ -155,36 +162,36 @@ const validateEmail = (email) => {
         <div className='flex justify-between items-center flex-col md:flex-col lg:flex-row'>
           <div className='text-center'>
             <h2 className='text-[28px] leading-relaxed font-sans font-bold text-gray-600 text-white'>About Us</h2>
-            <p className='max-w-[700px] text-[18px] font-nunito  md:text-[24px] font-sans text-white mt-5 '>Cinemark Media is a dynamic digital marketing agency that combines
+            <p className='max-w-[700px] text-[16px] font-sub-content  md:text-[20px] font-sans text-white mt-5 '>Cinemark Media is a dynamic digital marketing agency that combines
               creativity and strategic thinking to deliver innovative and effective solutions
               for your projects. With a focus on cutting-edge digital trends, Cinemark Media is dedicated
               to elevating your online presence and maximizing your impact in the digital landscape.</p>
           </div>
-          <div className='mt-10'><img src="/img/logo.jpeg" alt="logo" height={400} width={400}></img></div>
+          <div className='mt-10 animate-pulse font'><img src="/img/newLogo.png" alt="logo" height={400} width={400}></img></div>
         </div>
 
 
         {/* our services */}
         <div className='text-center mt-[100px]' >
           <h2 className='text-[32px] leading-relaxed font-sans font-bold font-sans  text-white' id='services'>Our Services</h2>
-          <p className='font-sans text-white  text-[18px]  md:text-[24px] mt-5  font-nunito'>DG Avatar specialises in all types of branding solutions and primarily serves the Film and Entertainment sector. We provide the following services:</p>
+          <p className='font-sans text-white  text-[16px]  md:text-[20px] mt-5  font-sub-content'>DG Avatar specialises in all types of branding solutions and primarily serves the Film and Entertainment sector. We provide the following services:</p>
           <div className='flex flex-wrap gap-[32px] mt-[40px] justify-center'>
-            <div className='flex flex-col items-center  bg-[#e6f9ff] rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="https://dgavatar.in/wp-content/uploads/2022/10/Social-Media-300x300.png" alt="logo" height={300} width={300}></img>
-              <p className='font-sans text-gray-700 font-nunito  '>Social Media Management</p>
+            <div className='flex flex-col items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Digital_Marketing_2-removebg-preview (1).png" alt="logo" height={300} width={300}></img>
+              <p className='font-sans text-gray-700 font-nunito  '>Digital Marketing</p>
             </div>
-            <div className='flex flex-col items-center  bg-[#e6f9ff] rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="https://dgavatar.in/wp-content/uploads/2022/10/Social-Media-300x300.png" alt="logo" height={300} width={300}></img>
-              <p className='font-sans text-gray-700 font-nunito '>Social Media Management</p>
+            <div className='flex flex-col items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Digital_PR_2-removebg-preview.png" alt="logo" height={300} width={300}></img>
+              <p className='font-sans text-gray-700 font-nunito '>Digital PR</p>
             </div>
-            <div className='flex flex-col items-center  bg-[#e6f9ff] rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="https://dgavatar.in/wp-content/uploads/2022/10/Social-Media-300x300.png" alt="logo" height={300} width={300}></img>
-              <p className='font-sans text-gray-700 font-nunito '>Social Media Management</p>
+            <div className='flex flex-col items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/youtube_marketing-removebg-preview.png" alt="logo" height={300} width={300}></img>
+              <p className='font-sans text-gray-700 font-nunito '>Youtube Marketing</p>
             </div>
-            <div className='flex flex-col items-center  bg-[#e6f9ff] rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="https://dgavatar.in/wp-content/uploads/2022/10/Social-Media-300x300.png" alt="logo" height={300} width={300}></img>
-              <p className='font-sans text-gray-700 font-nunito '>Social Media Management</p>
+            <div className='flex flex-col items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/youtube_marketing-removebg-preview.png" alt="logo" height={300} width={300}></img>
+              <p className='font-sans text-gray-700 font-nunito '>Meme Marketing</p>
             </div>
-            <div className='flex flex-col items-center  bg-[#e6f9ff] rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="https://dgavatar.in/wp-content/uploads/2022/10/Social-Media-300x300.png" alt="logo" height={300} width={300}></img>
-              <p className='font-sans text-gray-700 font-nunito '>Social Media Management</p>
+            <div className='flex flex-col items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/youtube_marketing-removebg-preview.png" alt="logo" height={300} width={300}></img>
+              <p className='font-sans text-gray-700 font-nunito '>Twiter Marketing</p>
             </div>
-            <div className='flex flex-col items-center  bg-[#e6f9ff] rounded-[30px] p-[15px]shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="https://dgavatar.in/wp-content/uploads/2022/10/Social-Media-300x300.png" alt="logo" height={300} width={300}></img>
+            <div className='flex flex-col items-center  rounded-[30px] p-[15px]shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/youtube_marketing-removebg-preview.png" alt="logo" height={300} width={300}></img>
               <p className='font-sans text-gray-700 font-nunito '>Social Media Management</p>
             </div>
           </div>
@@ -192,7 +199,7 @@ const validateEmail = (email) => {
         {/* work done by us */}
 
         <div className='text-center mt-[100px]' id='work' >
-          <h3 className=' text-center mt-[100px] text-[32px] leading-relaxed font-sans font-bold text-white font-sans' id='contact'
+          <h3 className=' text-center mt-[100px] text-[32px] leading-relaxed font-sans font-bold text-white font-sans'
           >Our Work</h3>
           <div className='flex flex-wrap gap-[32px] mt-[40px] justify-center'>
 
@@ -284,32 +291,11 @@ const validateEmail = (email) => {
         </div>
         {/* Footer */}
         <div className='bg-white h-1'></div>
-        <div className="p-[20px] flex justify-between flex-col md:flex-col lg:flex-row items-center">
-          <img src="/img/logo.jpeg" alt='company_logo_footer' height={200} width={200}></img>
-          <div><ul className='flex flex-col md:flex-col lg:flex-row text-center mt-3'>
-            <li className='mx-2  mt-5 lg:mt-3 '><a className='text-white text-[18px]  md:text-[24px] ' href="">Home</a></li>
-            <li className='mx-2 mt-5 lg:mt-3 '><a className='text-white text-[18px]  md:text-[24px] ' href="">About Us</a></li>
-            <li className='mx-2 mt-5  lg:mt-3'><a className='text-white text-[18px]  md:text-[24px] ' href="">Services</a></li>
-            <li className='mx-2 mt-5 lg:mt-3'><a className='text-white text-[18px]  md:text-[24px] ' href="">Work Done By Us</a></li>
-            <li className='mx-2 mt-5  lg:mt-3'><a className='text-white text-[18px]  md:text-[24px] ' href="">Contact</a></li>
-          </ul>
-            {/* <ul className='flex'>
-        <li className='mx-2 text-red'><a href="">Home</a></li>
-        <li className='mx-2 '><a href="">About Us</a></li>
-      </ul> */}
-          </div>
-          <div>
-            <ul className='flex  md:mt-10 mt-5'>
-              <li className='mx-1 text-red'><a href=""><img src="img/insta.png" alt="" height={70} width={70} /></a></li>
-              <li className='mx-1 text-red'><a href=""><img src="img/fb.png" alt="" height={70} width={70} /></a></li>
-              <li className='mx-1 text-red'><a href=""><img src="img/what.png" alt="" height={70} width={70} /></a></li>
-              <li className='mx-1 text-red'><a href=""><img src="img/insta.png" alt="" height={70} width={70} /></a></li>
-              <li className='mx-1 text-red'><a href=""><img src="img/fb.png" alt="" height={70} width={70} /></a></li>
-            </ul>
-            <p className='font-sans text-gray-600 mt-[10px] max-w-[300px] text-center mt-7 '>Juhu Tara Rd, Uditi Tarang Housing Colony, Juhu Tara, Juhu, Mumbai, Maharashtra 400049, India</p>
-          </div>
+        <div className="">
+          <h3>Mukesh881yadav@gmail.com</h3>
+          <h3>mukesh.yadav1fiance.co.in</h3>
+          <p>©2023 by Communiqué. Powered and secured by FullStop Media & Entertainment</p>
         </div>
-
       </div>
     </>
   )
