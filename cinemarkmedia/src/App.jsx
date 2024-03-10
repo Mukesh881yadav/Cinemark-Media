@@ -1,18 +1,72 @@
 import { useState, useEffect } from 'react'
+import emailjs from '@emailjs/browser';
 import './index.css'
 
 
 function App() {
+  const [name,setName]= useState('');
+  const [mob,setMob]=useState('');
+  const [email,setEmail]=useState('');
+  const [message,setMessage]=useState('');
+  const [mobileError, setMobileError] = useState('');
+  const [emailError, setEmailError] = useState('');
   const [showCount, setShowCount] = useState(8);
   const [isActive, setIsActive] = useState(false);
   const [menubar,setMenubar]=useState(true);
-  const [sidebar,setSidebarh]=useState(true)
+  
+
+ // Validation
+// 
 
 
-  const handleClickside= () => {
-    // Toggle the state between true and false
-   
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+     // Validation
+    let isValid = true;
+    if (!/^\d{10}$/.test(mob)) {
+      setMobileError('Please enter a valid 10-digit mobile number');
+      isValid = false;
+    } else {
+      setMobileError('');
+    }
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      setEmailError('Please enter a valid email address');
+      isValid = false;
+    } else {
+      setEmailError('');
+    }
+
+    if (!isValid) return;
+  
+    const serviceId = "service_yv333c7";
+    const templateId = "template_37nbu5w";
+    const userId = "9Nv-28ssASFeMq4cK";
+  
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      from_contact: mob,
+      message: message
+    };
+  
+    emailjs.send(serviceId, templateId, templateParams, userId)
+      .then((response) => {
+        
+        console.log('Email sent successfully:', response);
+        alert("you have submited successfully")
+        // Clear form fields after successful submission
+        setName('');
+        setMob('');
+        setEmail('');
+        setMessage('');
+      })
+      .catch((error) => {
+        console.log("nahi gaya")
+        console.error('Email sending failed:', error);
+      });
   };
+  
   const handleClick = () => {
     console.log("data")
     setIsActive(true);
@@ -47,40 +101,7 @@ function App() {
 
 //  Form Validation
 
-const [formData, setFormData] = useState({
-  fullName: { value: '', touched: false },
-  mobileNumber: { value: '', touched: false },
-  email: { value: '', touched: false },
-  message: { value: '', touched: false }
-});
 
-console.log(formData)
-const handleChange = (e) => {
-  const { name, value } = e.target;
-  setFormData(prevState => ({
-    ...prevState,
-    [name]: { value, touched: true }
-  }));
-};
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-  // Perform form submission or validation here
-  // For simplicity, let's just log the form data
-  console.log(formData);
-};
-
-const validateMobileNumber = (mobileNumber) => {
-  // Regular expression for validating Indian mobile numbers
-  const mobileRegex = /^[6-9]\d{9}$/;
-  return mobileRegex.test(mobileNumber);
-};
-
-const validateEmail = (email) => {
-  // Regular expression for validating email addresses
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-};
 
   const workDoneImg = [
     {
@@ -185,22 +206,22 @@ const validateEmail = (email) => {
           <h2 className='text-[32px] leading-relaxed font-sans font-bold font-sans  text-white' id='services'>Our Services</h2>
           <p className='font-sans text-white  text-[16px]  md:text-[20px] mt-5  font-sub-content'>DG Avatar specialises in all types of branding solutions and primarily serves the Film and Entertainment sector. We provide the following services:</p>
           <div className='flex flex-wrap gap-[32px] mt-[40px] justify-center'>
-            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Social_media_management-removebg-preview.png" alt="logo" height={300} width={300}></img>
+            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Digital_Marketing-removebg-preview.png" alt="logo" height={300} width={300}></img>
               <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white '>Digital Marketing</p>
             </div>
-            <div className='flex flex-col justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Social_media_management-removebg-preview.png" alt="logo" height={300} width={300}></img>
+            <div className='flex flex-col justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Digital_PR_2-removebg-preview.png" alt="logo" height={300} width={300}></img>
               <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>Digital PR</p>
             </div>
-            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Social_media_management-removebg-preview.png" alt="logo" height={300} width={300}></img>
+            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/FinalYT.png" alt="logo" height={300} width={300}></img>
               <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>Youtube Marketing</p>
             </div>
-            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Social_media_management-removebg-preview.png" alt="logo" height={300} width={300}></img>
+            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/mememarketing-removebg-preview.png" alt="logo" height={300} width={300}></img>
               <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>Meme Marketing</p>
             </div>
-            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Social_media_management-removebg-preview.png" alt="logo" height={300} width={300}></img>
-              <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>Twiter Marketing</p>
+            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/inf.png" alt="logo" height={200} width={200}></img>
+              <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>Influencer Marketing</p>
             </div>
-            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Social_media_management-removebg-preview.png" alt="logo" height={300} width={300}></img>
+            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Social_media_management-removebg-preview.png" alt="logo" height={250} width={250}></img>
               <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>social media management</p>
             </div>
           </div>
@@ -242,8 +263,8 @@ const validateEmail = (email) => {
           id="full-name"
           type="text"
           name="fullName"
-          value={formData.fullName.value}
-          onChange={handleChange}
+          
+          onChange={(e)=>setName(e.target.value)}
           placeholder='Enter Your Name'
           required
         />
@@ -254,15 +275,15 @@ const validateEmail = (email) => {
           id="contact"
           type="text"
           name="mobileNumber"
-          value={formData.mobileNumber.value}
-          onChange={handleChange}
+          
+          onChange={(e)=>setMob(e.target.value)}
           placeholder='Enter Mobile Number'
           pattern="[0-9]*"
           minLength="10"
           maxLength="10"
           required
         />
-        {formData.mobileNumber.touched && !validateMobileNumber(formData.mobileNumber.value) && <p className="text-red-500 font-nunito">Please enter a valid mobile number</p>}
+    {mobileError && <p>ths is workDoneImg</p>}
       </div>
       <div className="mb-10">
         <input
@@ -270,27 +291,27 @@ const validateEmail = (email) => {
           id="contact"
           type="email"
           name="email"
-          value={formData.email.value}
-          onChange={handleChange}
+          onChange={(e)=>setEmail(e.target.value)}
+       
           placeholder='Enter Email'
           required
         />
-          {formData.email.touched && !validateEmail(formData.email.value) && <p className="text-red-500 font-nunito">Please enter a valid email address</p>}
+        
       </div>
       <div className="mb-6">
         <textarea
           className="text-white shadow appearance-none border-b-[1px]  font-nunito w-full text-gray-700 leading-tight focus:outline-none bg-black focus:shadow-outline"
           id="message"
           name="message"
-          value={formData.message.value}
-          onChange={handleChange}
+
+          onChange={(e)=>setMessage(e.target.value)}
           placeholder='Write message here....'
           required
         />
       </div>
       <div className="flex items-center justify-between">
         <button
-          className={`${formData?"bg-white":"bg-gray-400"} hover:bg-gray-700 font-nunito hover:text-white text-black font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline`}
+          className={`bg-gray-700 hover:bg-white font-nunito hover:text-gray-700 text-white font-bold py-2 px-6 rounded focus:outline-none focus:shadow-outline`}
           type="submit"
         >
           Submit
