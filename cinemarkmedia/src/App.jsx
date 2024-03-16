@@ -205,23 +205,23 @@ function App() {
         <div className='text-center mt-[100px]' >
           <h2 className='text-[32px] leading-relaxed font-sans font-bold font-sans  text-white' id='services'>Our Services</h2>
           <p className='font-sans text-white  text-[16px]  md:text-[20px] mt-5  font-sub-content'>DG Avatar specialises in all types of branding solutions and primarily serves the Film and Entertainment sector. We provide the following services:</p>
-          <div className='flex flex-wrap gap-[32px] mt-[40px] justify-center'>
-            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Digital_Marketing-removebg-preview.png" alt="logo" height={300} width={300}></img>
+          <div className='flex flex-wrap gap-[32px] mt-[40px] justify-center '>
+            <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/dm-removebg-preview.png" alt="logo" height={300} width={300}></img>
               <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white '>Digital Marketing</p>
             </div>
-            <div className='flex flex-col justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Digital_PR_2-removebg-preview.png" alt="logo" height={300} width={300}></img>
+            <div className=' border-white flex flex-col justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/digiPR-removebg-preview.png" alt="logo" height={250} width={250}></img>
               <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>Digital PR</p>
             </div>
-            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/FinalYT.png" alt="logo" height={300} width={300}></img>
+            <div className='  border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/ytm-removebg-preview.png" alt="logo" height={300} width={300}></img>
               <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>Youtube Marketing</p>
             </div>
-            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/mememarketing-removebg-preview.png" alt="logo" height={300} width={300}></img>
+            <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Meme-removebg-preview.png" alt="logo" height={300} width={300}></img>
               <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>Meme Marketing</p>
             </div>
-            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/inf.png" alt="logo" height={200} width={200}></img>
+            <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/influ-removebg-preview.png" alt="logo" height={390} width={390}></img>
               <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>Influencer Marketing</p>
             </div>
-            <div className='flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Social_media_management-removebg-preview.png" alt="logo" height={250} width={250}></img>
+            <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/social-removebg-preview.png" alt="logo" height={330} width={330}></img>
               <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>social media management</p>
             </div>
           </div>
