@@ -105,59 +105,74 @@ function App() {
 
   const workDoneImg = [
     {
-      img: "/img/m1.png"
+      img: "/img/1000091276.png"
     },
     {
-      img: "/img/m2.png"
+      img: "/img/1000091278.png"
     },
     {
-      img: "/img/m3.png"
+      img: "/img/1000091280.png"
     },
     {
-      img: "/img/m4.png"
+      img: "/img/1000091282.png"
     },
     {
-      img: "/img/m5.png"
+      img: "/img/1000091284.png"
     },
     {
-      img: "/img/m6.png"
+      img: "/img/1000091286.png"
     },
     {
-      img: "/img/m7.png"
+      img: "/img/1000091288.png"
     },
     {
-      img: "/img/m9.png"
+      img: "/img/1000095910.png"
     },
     {
-      img: "/img/m10.png"
+      img: "/img/1000095911.png"
     },
     {
-      img: "/img/m11.png"
+      img: "/img/1000095912.png"
     },
     {
-      img: "/img/m12.png"
+      img: "/img/1000095932.png"
     },
     {
-      img: "/img/m13.png"
+      img: "/img/1000095947.png"
     },
     {
-      img: "/img/m14.png"
+      img: "/img/1000095948.png"
     },
     {
-      img: "/img/m15.png"
+      img: "/img/1000095949.png"
     },
     {
-      img: "/img/m16.png"
+      img: "/img/1000095950.png"
     }, {
-      img: "/img/m17.png"
+      img: "/img/1000095952.png"
     },
     {
-      img: "/img/m18.png"
+      img: "/img/1000095953.png"
     },
     {
-      img: "/img/m19.png"
+      img: "/img/1000095954.png"
     }, {
-      img: "/img/m20.png"
+      img: "/img/1000095956.png"
+    },
+    {
+      img: "/img/1000095957.png"
+    },
+    {
+      img: "/img/1000095958.png"
+    },
+    {
+      img: "/img/1000095961.png"
+    },
+    {
+      img: "/img/1000095962.png"
+    },
+    {
+      img: "/img/1000095963.png"
     },
 
   ]
@@ -206,23 +221,23 @@ function App() {
           <h2 className='text-[32px] leading-relaxed font-sans font-bold font-sans  text-white' id='services'>Our Services</h2>
           <p className='font-sans text-white  text-[16px]  md:text-[20px] mt-5  font-sub-content'>DG Avatar specialises in all types of branding solutions and primarily serves the Film and Entertainment sector. We provide the following services:</p>
           <div className='flex flex-wrap gap-[32px] mt-[40px] justify-center '>
-            <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/dm-removebg-preview.png" alt="logo" height={300} width={300}></img>
-              <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white '>Digital Marketing</p>
+            <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/11_page-0001.png" alt="logo" height={300} width={300}></img>
+              <p className='font-sans text-gray-700  font-bold text-[22px] font-nunito  font-sub-content text-white '>Digital Marketing</p>
             </div>
-            <div className=' border-white flex flex-col justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/digiPR-removebg-preview.png" alt="logo" height={250} width={250}></img>
-              <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>Digital PR</p>
+            <div className=' border-white flex flex-col justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/sakshi.docx-5_page-0001__1_-removebg-preview.png" alt="logo" height={290} width={290}></img>
+              <p className='font-sans text-gray-700 font-nunito   font-bold text-[22px] font-sub-content text-white'>Digital PR</p>
             </div>
-            <div className='  border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/ytm-removebg-preview.png" alt="logo" height={300} width={300}></img>
-              <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>Youtube Marketing</p>
+            <div className='  border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/sakshi.docx-2_page-0001 (1).png" alt="logo" height={290} width={290}></img>
+              <p className='font-sans text-gray-700 font-nunito   font-bold text-[22px] font-sub-content text-white'>Youtube Marketing</p>
             </div>
-            <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/Meme-removebg-preview.png" alt="logo" height={300} width={300}></img>
-              <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>Meme Marketing</p>
+            <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/sakshi.docx-1_page-0001 (1).png" alt="logo" height={300} width={300}></img>
+              <p className='font-sans text-gray-700 font-nunito   font-bold text-[22px] font-sub-content text-white'>Meme Marketing</p>
             </div>
-            <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/influ-removebg-preview.png" alt="logo" height={390} width={390}></img>
-              <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>Influencer Marketing</p>
+            <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/sakshi.docx-6_page-0001 (1).png" alt="logo" height={285} width={285}></img>
+              <p className='font-sans text-gray-700 font-nunito   font-bold text-[22px] font-sub-content text-white'>Influencer Marketing</p>
             </div>
-            <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/social-removebg-preview.png" alt="logo" height={330} width={330}></img>
-              <p className='font-sans text-gray-700 font-nunito  font-sub-content text-white'>social media management</p>
+            <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/sakshi.docx-4_page-0001 (1).png" alt="logo" height={310} width={310}></img>
+              <p className='font-sans text-gray-700 font-nunito   font-bold text-[22px] font-sub-content text-white'>social media management</p>
             </div>
           </div>
         </div>
@@ -326,9 +341,9 @@ function App() {
           <h3 className='font-sub-content text-white  mt-3'>mukesh.yadav1fiance.co.in</h3>
           <div className='flex justify-center items-center'>
            <a> <img    className='h-20 w-20 cursor-pointer' src='/img/insta.png'></img></a>
-           <a> <img    className='h-20 w-20 cursor-pointer' src='/img/insta.png'></img></a>
-           <a> <img    className='h-20 w-20 cursor-pointer' src='/img/insta.png'></img></a>
-           <a> <img    className='h-20 w-20 cursor-pointer' src='/img/insta.png'></img></a>
+           <a> <img    className='h-15 w-14 cursor-pointer' src='/img/Picsart_24-03-21_14-24-34-837.png'></img></a>
+           <a> <img    className='h-20 w-20 cursor-pointer' src='/img/linkedin-logo-linkedin-icon-transparent-free-png.png'></img></a>
+           <a> <img    className='h-9 w-12 cursor-pointer' src='/img/png-clipart-computer-icons-facebook-facebook-logo-black-and-white-removebg-preview.png'></img></a>
           </div>
         </div>
       </div>
