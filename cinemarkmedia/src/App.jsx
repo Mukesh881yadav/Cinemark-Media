@@ -105,6 +105,21 @@ function App() {
 
   const workDoneImg = [
     {
+      img:"/img/Picsart_24-03-06_15-16-51-558.png"
+    },
+    {
+      img:"/img/Picsart_24-03-21_17-48-18-446.png"
+    },
+    {
+      img:"/img/Picsart_24-03-21_17-48-18-446.png"
+    },
+    {
+      img:"/img/Picsart_24-03-21_17-48-18-446.png"
+    },
+    {
+      img:"/img/Picsart_24-03-21_17-48-18-446.png"
+    },
+    {
       img: "/img/1000091276.png"
     },
     {
@@ -174,6 +189,7 @@ function App() {
     {
       img: "/img/1000095963.png"
     },
+    
 
   ]
   return (
@@ -212,7 +228,7 @@ function App() {
               for your projects. With a focus on cutting-edge digital trends, Cinemark Media is dedicated
               to elevating your online presence and maximizing your impact in the digital landscape.</p>
           </div>
-          <div className='mt-10 animate-pulse font'><img src="/img/newLogo.png" alt="logo" height={400} width={400}></img></div>
+          <div className='mt-10 font border border-solid border-white'><img src="/img/Picsart_24-03-24_21-58-49-262.png" alt="logo" height={400} width={400}></img></div>
         </div>
 
 
@@ -222,22 +238,22 @@ function App() {
           <p className='font-sans text-white  text-[16px]  md:text-[20px] mt-5  font-sub-content'>DG Avatar specialises in all types of branding solutions and primarily serves the Film and Entertainment sector. We provide the following services:</p>
           <div className='flex flex-wrap gap-[32px] mt-[40px] justify-center '>
             <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/11_page-0001.png" alt="logo" height={300} width={300}></img>
-              <p className='font-sans text-gray-700  font-bold text-[22px] font-nunito  font-sub-content text-white '>Digital Marketing</p>
+              <p className='font-sans text-gray-700  font-bold text-[22px] font-nunito  font-sub-content text-white border-b-2 border-white mb-2 pb-3'>Digital Marketing</p>
             </div>
             <div className=' border-white flex flex-col justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/sakshi.docx-5_page-0001__1_-removebg-preview.png" alt="logo" height={290} width={290}></img>
-              <p className='font-sans text-gray-700 font-nunito   font-bold text-[22px] font-sub-content text-white'>Digital PR</p>
+              <p className='font-sans text-gray-700 font-nunito   font-bold text-[22px] font-sub-content text-white border-b-2 border-white pb-3'>Digital PR</p>
             </div>
             <div className='  border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/sakshi.docx-2_page-0001 (1).png" alt="logo" height={290} width={290}></img>
-              <p className='font-sans text-gray-700 font-nunito   font-bold text-[22px] font-sub-content text-white'>Youtube Marketing</p>
+              <p className='font-sans text-gray-700 font-nunito   font-bold text-[22px] font-sub-content text-white border-b-2 border-white pb-3'>Youtube Marketing</p>
             </div>
             <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/sakshi.docx-1_page-0001 (1).png" alt="logo" height={300} width={300}></img>
-              <p className='font-sans text-gray-700 font-nunito   font-bold text-[22px] font-sub-content text-white'>Meme Marketing</p>
+              <p className='font-sans text-gray-700 font-nunito   font-bold text-[22px] font-sub-content text-white border-b-2 border-white pb-3'>Meme Marketing</p>
             </div>
-            <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/sakshi.docx-6_page-0001 (1).png" alt="logo" height={285} width={285}></img>
-              <p className='font-sans text-gray-700 font-nunito   font-bold text-[22px] font-sub-content text-white'>Influencer Marketing</p>
+            <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/sakshi.docx-6_page-0001 (1).png" alt="logo" height={280} width={280}></img>
+              <p className='font-sans text-gray-700 font-nunito   font-bold text-[22px] font-sub-content text-white border-b-2 border-white pb-3' >Influencer Marketing</p>
             </div>
-            <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/sakshi.docx-4_page-0001 (1).png" alt="logo" height={310} width={310}></img>
-              <p className='font-sans text-gray-700 font-nunito   font-bold text-[22px] font-sub-content text-white'>social media management</p>
+            <div className=' border-white flex flex-col  justify-betwee items-center  rounded-[30px] p-[15px] shadow-md transition duration-300 ease-in-out transform hover:scale-105'><img src="img/sakshi.docx-4_page-0001 (1).png" alt="logo" height={300} width={300}></img>
+              <p className='font-sans text-gray-700 font-nunito   font-bold text-[22px] font-sub-content text-white border-b-2 border-white pb-3'>social media management</p>
             </div>
           </div>
         </div>
@@ -337,8 +353,8 @@ function App() {
         {/* Footer */}
         <div className='bg-white h-1 '></div>
         <div className="flex-col justify-center items-center text-center mt-10">
-          <h3 className='font-sub-content text-white cursor-pointer '>mukesh881yadav@gmail.com</h3>
-          <h3 className='font-sub-content text-white  mt-3'>mukesh.yadav1fiance.co.in</h3>
+       
+          <h3 className='font-sub-content text-white  mt-3'>contact@cinemarkmedia.com</h3>
           <div className='flex justify-center items-center'>
            <a> <img    className='h-20 w-20 cursor-pointer' src='/img/insta.png'></img></a>
            <a> <img    className='h-15 w-14 cursor-pointer' src='/img/Picsart_24-03-21_14-24-34-837.png'></img></a>
